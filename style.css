@@ -1,0 +1,41 @@
+/* :root {
+    --mau-do: rgb(116, 136, 168);
+}
+
+.title {
+    color: red;
+} */
+
+body {
+    background-color: aquamarine;
+}
+
+#menubar ul li {
+    display: inline-table;
+}
+
+/* .div-image {
+    border-bottom: 2px dashed red;
+    width: 80%;
+}
+
+.icon-star {
+    vertical-align: middle;
+    color: yellow;
+}
+
+#test-ul li:first-child {
+    color: red;
+}
+
+#test-ul li:last-child {
+    color: red;
+}
+
+.radio-input:checked + label {
+    color: red;
+}
+
+button span {
+    vertical-align: middle;
+} */
