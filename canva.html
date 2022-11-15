@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="test"
+        width="600" height="110"
+        style="background: whitesmoke;">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById('test');
+        var ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.arc(320, 55, 50, Math.PI, 0.5);
+        ctx.strokeStyle = 'green';
+        ctx.lineWidth = 5; //Độ rộng
+        ctx.stroke();
+
+
+    </script>
+</body>
+</html>
