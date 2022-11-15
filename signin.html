@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0a16f1068e.js" crossorigin="anonymous"></script>
+    <title>GRE Shop</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .left-container {
+            background-color: #F6F6F6;
+            width: 40%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            z-index: 2;
+        }
+
+        .signin-option p:first-child {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .signin-option p:last-child {
+            text-align: center;
+        }
+
+        .signin-icon {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 30px;
+        }
+
+        .signin-input {
+            width: 80%;
+        }
+
+        .signin-input input {
+            width: 100%;
+            margin: 15px auto;
+            height: 35px;
+            background-color: #EBEBEB;
+            border: 0;
+            border-top: 2px #00FF29 solid;
+            text-indent: 10px;
+        }
+
+
+
+        .signin-input input:focus {
+    
+            background-color: #EBEBEB;
+            border: 0;
+            border-top: 2px #00FF29 solid;
+            text-indent: 10px;
+        }
+
+        .code-parent {
+            position: relative;
+        }
+
+        .code-otp {
+            background-color: #49FF50;
+            color: white;
+            height: 35px;
+            position: absolute;
+            right: 0;
+            top: 15px;
+        }
+
+        .signin-input select {
+            width: 100%;
+            margin: 15px auto;
+            height: 35px;
+            background-color: #EBEBEB;
+            border: 0;
+            border-top: 2px #00FF29 solid;
+            text-indent: 10px;
+        }
+
+        .signin-check-password {
+            background-color: #E5E0E0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .signin-footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .signin-footer button {
+            background-color: #49FF50;
+            border: 0;
+            height: 58px;
+            width: 190px;
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .right-container {
+            background-color: #0AFF31;
+            width: 40%;
+            height: 80%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-container a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .introduction {
+            margin: auto;
+        }
+
+        .introduction p:first-child {
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .introduction p:last-child {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .text-shop-mobile p {
+            margin: 0;
+            font-size: 32px;
+            font-weight: bold;
+            color: #49FF50;
+        }
+
+        .signup-route-mobile {
+            position: relative;
+            width: 100%;
+        }
+
+        .signup-route-mobile a {
+            position: absolute;
+            right: 30px;
+            text-decoration: none;
+        }
+
+        .text-shop-mobile {
+            display: none;
+        }
+
+        .signup-route-mobile {
+            display: none;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .text-shop-mobile {
+                display: block;
+            }
+            .right-container {
+                display: none;
+            }
+            .signup-route-mobile {
+                display: block;
+            }
+            .signin-option p:first-child {
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="signin-option">
+                <p>Đăng nhập</p>
+                <div class="signin-icon">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+                <p>hoặc đăng nhập bằng tài khoản của bạn</p>
+            </div>
+            <div class="text-shop-mobile">
+                <p>GreShop</p>
+            </div>
+            <div class="signin-input">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Mật khẩu">
+            </div>
+            <div class="signin-check-password">
+                <input type="checkbox">
+                <label for="">Nhớ mật khẩu</label>
+            </div>
+            <div class="signin-footer">
+                <p>Quên mật khẩu ?</p>
+                <button>Đăng nhập</button>
+            </div>
+            <div class="signup-route-mobile">
+                <a href="signup.html">Tạo tài khoản</a>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="introduction">
+                <p>GRESHOP</p>
+                <p>Chào mừng bạn đến với GreShop</p>
+            </div>
+            <a href="signup.html">Tạo tài khoản</a>
+        </div>
+    </div>
+</body>
+</html>
