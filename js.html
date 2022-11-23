@@ -9,54 +9,31 @@
 <body>
     <p id="demo"></p>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script>
-        // let num = prompt('Kiem tra so chan')
+        // 1 - Viết hàm kiểm tra số chẵn
+        // 2 - Tính tổng các số chẵn trong mảng
+        const array = [2, 5, 7, 8, 9 ,15 ,28]
+        let result = 0
+        for (let i = 0; i < array.length; i++) {
+            result += array[i]
+        }
+        
+        console.log(result);
 
-        // while(true) {
-        //     if (num % 2 == 0) {
-        //         alert('la so chan')
-        //         break
-        //     }
-        //     else {
-        //         alert('la so le')
-        //         num = prompt('Kiem tra so chan')
-        //     }
-        // }
+        // 3 - Nhân đôi tất cả phần tử trong mảng
+        // Nâng cao: map() trong array
+        const array2 = [1, 2, 3]
+        for (let i = 0; i < array2.length; i++) {
+            array2[i] = array2[i] + 1
+        }
 
+        // 4 - Thêm phần tử, xóa phần tử cuối
+        // Thêm 'a', 'b', 'c', 'd' vào mảng array
+        // Xóa 'd'
 
-        // 1: 5x2 => split => case => 10
-        // 2: Kiem tra so chan, le
-        // 3: In ra man hinh => Ket qua la so chan: 10
-
-        // let num = 9
-        // let text = ''
-
-        // for (let i = 1; i < 10; i++) {
-        //     text += `${num} * ${i} = ${num*i} <br>`
-        //     // text += num + '*' + i + '=' + num*i
-        // }
-        // document.getElementById('demo').innerHTML = text
-
-        // let a = 9
-        // let text = ''
-
-        // switch(a) {
-        //     case 1:
-        //         text = '1'
-        //     case 9:
-        //         text = '9'
-        //     default:
-        //         text = ''
-        // }
-
-        // console.log(text);
-
-        // Toan tu 3 ngoi
-        // dieu kien ? thuc hien khi dung : thuc hien khi sai
-        // text = a < 10 ? 'a nho hon 10' : 'a lon hon 10'
-
-        // console.log(text);
+        // 5 - Xóa phần tử bất kỳ
+        // Xóa 'b'
 
     </script>
 </body>
