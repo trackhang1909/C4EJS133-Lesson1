@@ -12,28 +12,55 @@
     <!-- <script src="script.js"></script> -->
     <script>
         // 1 - Viết hàm kiểm tra số chẵn
+        const isEven = (num) => {
+            return num % 2 == 0 ? true : false
+        }
+
         // 2 - Tính tổng các số chẵn trong mảng
         const array = [2, 5, 7, 8, 9 ,15 ,28]
+        // 0 1 2 3 4 5 6
+
         let result = 0
-        for (let i = 0; i < array.length; i++) {
-            result += array[i]
+
+        for (let i = 0; i < array.length; i += 2) {
+            if (isEven(array[i])) {
+                result += array[i]
+            }
         }
-        
+
         console.log(result);
 
         // 3 - Nhân đôi tất cả phần tử trong mảng
         // Nâng cao: map() trong array
         const array2 = [1, 2, 3]
+
         for (let i = 0; i < array2.length; i++) {
-            array2[i] = array2[i] + 1
+            array2[i] = array2[i] * 2
         }
+
+        // const resultMulti = array2.map(element => element * 2)
+
+        // console.log(resultMulti);
 
         // 4 - Thêm phần tử, xóa phần tử cuối
         // Thêm 'a', 'b', 'c', 'd' vào mảng array
         // Xóa 'd'
+        array.push('a')
+        array.push('b')
+        array.push('c')
+        array.push('d')
+
+        array.pop()
+
+        console.log(array);
 
         // 5 - Xóa phần tử bất kỳ
         // Xóa 'b'
+
+        array.splice(8, 1)
+
+        console.log(array);
+
 
     </script>
 </body>

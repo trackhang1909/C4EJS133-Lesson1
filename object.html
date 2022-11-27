@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        const student = [
+            {
+                name: 'Name 1',
+                mark: 10
+            },
+            {
+                name: 'Name 2',
+                mark: 58
+            },
+            {
+                name: 'Name 3',
+                mark: 7
+            },
+            {
+                name: 'Name 4',
+                mark: 15
+            }
+        ]
+
+        // 1 - Tìm học viên có điểm > 8
+        // 2 - Thêm một key: graduated: true cho học viên điểm trên 8
+        // 3 - Tìm học viên có điểm thấp nhất trong array student
+
+        let maxMarkStd = null
+        let maxMark = 0
+
+        for (let element of student) {
+            if (element.mark > maxMark) {
+                maxMark = element.mark
+                maxMarkStd = element
+            }
+        }
+
+        console.log(maxMarkStd);
+
+    </script>
+</body>
+</html>
