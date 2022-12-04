@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form id="form-signin">
+        <label for="email">Email</label>
+        <input id="email" type="text"><br>
+        <p id="errorEmail" class="error hide">Bạn đã nhập sai email</p>
+        <label for="password">Mật khẩu</label>
+        <input id="password" type="password"><br>
+        <p id="errorPassword" class="error hide">Bạn đã nhập sai mật khẩu</p>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+
+    <script>
+
+        const formSignIn = document.getElementById('form-signin')
+        const errorEmail = document.getElementById('errorEmail')
+        const errorPassword = document.getElementById('errorPassword')
+
+        formSignIn.addEventListener('submit', (event) => {
+            event.preventDefault()
+
+            const email = event.target.email.value
+            const password = event.target.password.value
+            // email: admin@gmail.com
+            // password: 123456
+
+            if (email == 'admin@gmail.com' && password == '123456') {
+                window.location.href = 'lession10.html'
+            } else {
+                errorEmail.classList.replace('hide', 'show')
+            }
+
+            event.target.email.addEventListener('keydown', () => {
+                console.log('aaaaaaaaa');
+            })
+
+        })
+
+    </script>
+</body>
+</html>

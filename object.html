@@ -12,11 +12,11 @@
         const student = [
             {
                 name: 'Name 1',
-                mark: 10
+                mark: 1
             },
             {
                 name: 'Name 2',
-                mark: 58
+                mark: 8
             },
             {
                 name: 'Name 3',
@@ -24,7 +24,7 @@
             },
             {
                 name: 'Name 4',
-                mark: 15
+                mark: 9
             }
         ]
 
@@ -32,17 +32,32 @@
         // 2 - Thêm một key: graduated: true cho học viên điểm trên 8
         // 3 - Tìm học viên có điểm thấp nhất trong array student
 
-        let maxMarkStd = null
-        let maxMark = 0
+        const studentGoodMark = []
+
+        student.forEach(e => {
+            if (e.mark > 8) {
+                studentGoodMark.push(e)
+            }
+        })
+
+        studentGoodMark.forEach(e => {
+            e.graduated = true
+        })
+
+        console.log(studentGoodMark);
+
+
+        let minMarkStd = null
+        let minMark = Number.MAX_VALUE
 
         for (let element of student) {
-            if (element.mark > maxMark) {
-                maxMark = element.mark
-                maxMarkStd = element
+            if (element.mark < minMark) {
+                minMark = element.mark
+                minMarkStd = element
             }
         }
 
-        console.log(maxMarkStd);
+        console.log(minMarkStd);
 
     </script>
 </body>
