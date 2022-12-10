@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form id="form-signin">
+        <label for="email">Email</label>
+        <input id="email" type="text"><br>
+
+        <label for="password">Mật khẩu</label>
+        <input id="password" type="password"><br>
+
+        <p id="errorSignin" class="error hide">Bạn đã nhập sai tài khoản</p>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+
+    <script>
+
+        // const account = JSON.parse(localStorage.getItem('account'))
+
+        let account = localStorage.getItem('account')
+        account = JSON.parse(account)
+
+        const formSignIn = document.getElementById('form-signin')
+        const errorSignin = document.getElementById('errorSignin')
+
+        formSignIn.addEventListener('submit', (event) => {
+            event.preventDefault()
+
+            const email = event.target.email.value
+            const password = event.target.password.value
+
+            if (email == account.email && password == account.password) {
+                localStorage.setItem('flagSignIn', true)
+                window.location.href = 'index.html'
+            } else {
+                errorSignin.classList.replace('hide', 'show')
+                
+                event.target.email.value = ''
+                event.target.password.value = ''
+
+                // errorSignin.classList.remove('hide')
+                // errorSignin.classList.add('show')
+            }
+
+            event.target.email.addEventListener('keyup', () => {
+                errorSignin.classList.replace('show', 'hide')
+            })
+
+            event.target.password.addEventListener('keyup', () => {
+                errorSignin.classList.replace('show', 'hide')
+            })
+
+        })
+
+    </script>
+</body>
+</html>

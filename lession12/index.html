@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Trang chu</p>
+    <p id="song"></p>
+
+    <img src="iamge.png" alt="">
+
+    <script src="demo.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const songID = urlParams.get('songID')
+
+        const song = [
+            {
+                id: 1,
+                name: 'Bai 1',
+                image: 'imgae.png'
+            }, 
+            {
+                id: 2,
+                name: 'Bai 2'
+            }
+        ]
+
+        img.setAttribute('src', bai1.image)
+        document.getElementById('song').innerText = 'Bai hat so ' + songID
+
+        // const flagSignIn = localStorage.getItem('flagSignIn')
+
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     if (flagSignIn == 'true') {
+        //         alert('Da dang nhap')
+        //     }
+        //     else {
+        //         alert('Ban chua dang nhap')
+        //         window.location.href = 'signin.html'
+        //     }
+
+        // })
+
+
+
+        // const localSong = [
+        //     {
+        //         id: 1,
+        //         name: 'Bai 1'
+        //     },
+        //     {
+        //         id: 2,
+        //         name: 'Bai 2'
+        //     }
+        // ]
+
+        // const song = localSong.find(a => a.id == songID)
+        // console.log(song);
+
+
+    </script>
+</body>
+</html>

@@ -10,19 +10,48 @@
             text-decoration: line-through;
             color: red;
         }
+
+        /* #id, .class */
     </style>
 </head>
 <body>
-    <ul id="list"></ul>
+    <ul id="list">
+        <!-- <li class="active abc" onclick="clickLi(this)">
+            AAAA
+            <button onclick="remove(this)">x</button>
+        </li> -->
+    </ul>
 
-    <input id="todoList" type="text">
+    <input id="todoList" type="text" onkeypress="pressEnter(event)">
     <button onclick="addToDo()">Add</button>
 
+
+    <div id="myDiv">
+        <p id="myP">This is a paragraph</p>
+    </div>
+
     <script>
+
+
+        const p = document.getElementById('myP')
+        const div = document.getElementById('myDiv')
+
+        div.addEventListener('click', function() {
+            console.log('div clicked')
+        })
+
+        p.addEventListener('click', function() {
+            console.log('p clicked')
+        })
+
+
+        const ulList = document.getElementById('list')
+
         const addToDo = () => {
             const todoList = document.getElementById('todoList')
 
             let li = document.createElement('li')
+
             // li.innerText = todoList.value
 
             li.innerHTML = todoList.value + ' <button onclick="remove(this)">x</button>'
@@ -31,11 +60,17 @@
 
             todoList.value = ''
 
-            document.getElementById('list').appendChild(li)
+            ulList.appendChild(li)
+        }
+
+        const pressEnter = (event) => {
+            if (event.keyCode == 13) {
+                addToDo()
+            }
         }
 
         const remove = (event) => {
-            document.getElementById('list').removeChild(event.parentNode)
+            ulList.removeChild(event.parentNode)
         }
 
         const clickLi = (event) => {
